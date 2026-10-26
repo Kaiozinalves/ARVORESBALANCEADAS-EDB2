@@ -1,0 +1,16 @@
+# IDEs e Editores
+.idea/
+*.iml
+out/
+.vscode/
+.settings/
+.project
+.classpath
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# ATENÇÃO (Requisito do Projeto IMD0039):
+# Não ignorar bin/ nem AmazonTrees.jar, pois o edital exige a inclusão
+# dos binários compilados (.class e/ou .jar) no repositório GitHub.
