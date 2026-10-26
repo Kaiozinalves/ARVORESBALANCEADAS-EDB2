@@ -33,6 +33,9 @@ public class Main {
             System.out.println("    [0] Encerrar o sistema");
             System.out.print("\n  Opção desejada: ");
 
+            if (!scanner.hasNextLine()) {
+                break;
+            }
             String input = scanner.nextLine().trim();
             switch (input) {
                 case "1":
@@ -83,6 +86,9 @@ public class Main {
             System.out.println("  [0] Voltar ao menu principal (trocar de árvore)");
             System.out.print("\n  Escolha uma operação: ");
 
+            if (!scanner.hasNextLine()) {
+                break;
+            }
             String choice = scanner.nextLine().trim();
 
             switch (choice) {
@@ -144,6 +150,9 @@ public class Main {
 
     private static void handleBatchInsert(Scanner scanner, BalancedTree tree) {
         System.out.print("  Digite os IDs separados por espaço ou vírgula (ex: 10 20 30 40 50 25 35): ");
+        if (!scanner.hasNextLine()) {
+            return;
+        }
         String line = scanner.nextLine().trim();
         if (line.isEmpty()) {
             System.out.println("  [!] Nenhum valor informado.");
@@ -230,6 +239,9 @@ public class Main {
     }
 
     private static Integer readInt(Scanner scanner) {
+        if (!scanner.hasNextLine()) {
+            return null;
+        }
         String text = scanner.nextLine().trim();
         try {
             return Integer.parseInt(text);
